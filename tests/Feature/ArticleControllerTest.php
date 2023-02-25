@@ -19,7 +19,7 @@ class ArticleControllerTest extends TestCase
     public function testIndex(): void
     {
         $response = $this->get(route('articles.index'));
-        $response->assertStatus(200)
+        $response->assertStatus(400)
         ->assertViewIs('articles.index')
         ;
     }

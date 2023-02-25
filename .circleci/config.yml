@@ -18,7 +18,7 @@ jobs:
           key: node-v1-{{ checksum "package-lock.json" }}
       - run:
           name: npm ci
-          run:|
+          command: |
             if [ ! -d node_modules ]; then
               npm ci
             fi
